@@ -163,7 +163,9 @@ private:
 
             {
               std::lock_guard<std::mutex> lock(mutex_);
-              gh2_ = goal_handle;
+              //gh2_ = goal_handle;
+              ROS2GoalHandle tmp(goal_handle);
+              gh2_ = tmp;
 
               if (canceled_)
               { // cancel was called in between
