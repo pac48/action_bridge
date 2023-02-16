@@ -185,6 +185,7 @@ private:
       auto future_result = client_->async_get_result(gh2_future.get());
       auto res2 = future_result.get();
 
+
       ROS1Result res1;
       translate_result_2_to_1(res1, *(res2.result));
 
