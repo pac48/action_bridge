@@ -39,21 +39,14 @@ ament_export_include_directories(include)
 
 include_directories(include)
 
-add_executable(action_bridge_follow_joint_trajectory_1_2
-    "src/action_bridge_follow_joint_trajectory_1_2.cpp"
-)
-ament_target_dependencies(action_bridge_follow_joint_trajectory_1_2
-    "ros1_roscpp" "ros1_actionlib" "ros1_control_msgs"
-    "rclcpp" "rclcpp_action" "control_msgs"
-)
+#add_executable(action_bridge_follow_joint_trajectory_1_2
+#    "src/action_bridge_follow_joint_trajectory_1_2.cpp"
+#)
 
-add_executable(action_bridge_follow_joint_trajectory_2_1
-    "src/action_bridge_follow_joint_trajectory_2_1.cpp"
-)
-ament_target_dependencies(action_bridge_follow_joint_trajectory_2_1
-    "ros1_roscpp" "ros1_actionlib" "ros1_control_msgs"
-    "rclcpp" "rclcpp_action" "control_msgs"
-)
+#add_executable(action_bridge_follow_joint_trajectory_2_1
+#    "src/action_bridge_follow_joint_trajectory_2_1.cpp"
+#)
+
 
 add_executable(action_bridge_fibonacci_1_2
     "src/action_bridge_fibonacci_1_2.cpp"
@@ -71,7 +64,7 @@ ament_target_dependencies(action_bridge_fibonacci_2_1
     "rclcpp" "rclcpp_action" "action_tutorials_interfaces"
 )
 
-install(TARGETS action_bridge_follow_joint_trajectory_1_2 action_bridge_follow_joint_trajectory_2_1 action_bridge_fibonacci_1_2 action_bridge_fibonacci_2_1
+install(TARGETS action_bridge_fibonacci_1_2 action_bridge_fibonacci_2_1
     DESTINATION lib/${PROJECT_NAME}
 )
 
