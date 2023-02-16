@@ -72,7 +72,7 @@ public:
   {
     (void)uuid;
     (void)goal;
-    if (!client_->waitForActionServerToStart(ros::Duration(1)))
+    if (!client_->waitForActionServerToStart(ros::Duration(10)))
     {
       std::cout << "Action server not available after waiting" << std::endl;
       return rclcpp_action::GoalResponse::REJECT;
